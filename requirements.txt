@@ -4,7 +4,7 @@ numpy==1.18.2
 olefile==0.46
 opencv-python==4.2.0.32
 pandas==1.0.3
-Pillow==7.0.0
+Pillow>=7.1.0
 PIMS==0.4.1
 pylint==2.4.4
 rpy2==3.0.5
