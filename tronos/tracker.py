@@ -104,5 +104,7 @@ def detect_and_track(file_name):
     print("[TRONOS] Track filter statistics")
     print("\tBefore:", t["particle"].nunique())
     print("\tAfter:", t1["particle"].nunique())
+    # Uncomment to change column names again to source format
+    # t1.columns = ["y", "x", "Minor", "Area", "Convexity", "Perimeter", "Major", "Circularity", "Frame"]
     t1.to_csv(file_name + "_trajs.csv")
     print("[TRONOS] Trajectories were successfully saved to file trajectories.csv")
