@@ -123,7 +123,7 @@ def save_im(f, offset, factor, p):
     im = im.convert("L")
     return im
 
-
+# From https://stackoverflow.com/questions/48213278/implementing-otsu-binarization-from-scratch-python/50796152
 def otsu(gray, p):
     pixel_number = p.dvImageWidth * p.dvImageHeight
     mean_weigth = 1.0 / pixel_number
