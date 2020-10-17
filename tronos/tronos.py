@@ -388,6 +388,9 @@ def threshold(inputimage, outputimage, method="MaxEntropy", blur=False, crop = [
     macro_threshold(outputimage, method, blur, crop)
 
     if sys.platform == "darwin":
+        if (not os.path.isdir("/Applications/Fiji.app")):
+            print("[TRONOS] [ERROR] Could not find FIJI installed in your macOS system")
+
         command = (
             "/Applications/Fiji.app/Contents/MacOS/ImageJ-macosx"
             + " --headless --console -macro '"
@@ -396,6 +399,9 @@ def threshold(inputimage, outputimage, method="MaxEntropy", blur=False, crop = [
             + inputimage
         )
     else:
+        if (not os.path.isdir("~/Fiji.app")):
+            print("[TRONOS] [ERROR] Could not find FIJI installed in your Linux system")
+
         command = (
             "~/Fiji.app/ImageJ-linux64"
             + " --headless --console -macro '"

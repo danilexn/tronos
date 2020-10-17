@@ -39,6 +39,9 @@ def resolve_particles(file_name, path):
     command = ""
 
     if sys.platform == "darwin":
+        if (not os.path.isdir("/Applications/Fiji.app")):
+            print("[TRONOS] [ERROR] Could not find FIJI installed in your macOS system")
+
         command = (
             "/Applications/Fiji.app/Contents/MacOS/ImageJ-macosx"
             + " --headless --console -macro '"
@@ -47,6 +50,9 @@ def resolve_particles(file_name, path):
             + file_name
             )
     else:
+        if (not os.path.isdir("~/Fiji.app")):
+            print("[TRONOS] [ERROR] Could not find FIJI installed in your Linux system")
+
         command = (
             "~/Fiji.app/ImageJ-linux64"
             + " --headless --console -macro '"
