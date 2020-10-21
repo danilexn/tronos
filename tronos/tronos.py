@@ -399,7 +399,7 @@ def threshold(inputimage, outputimage, method="MaxEntropy", blur=False, crop = [
             + inputimage
         )
     else:
-        if (not os.path.isdir("~/Fiji.app")):
+        if (not os.path.isdir(os.path.expanduser("~/Fiji.app"))):
             print("[TRONOS] [ERROR] Could not find FIJI installed in your Linux system")
 
         command = (
