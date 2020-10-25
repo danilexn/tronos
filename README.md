@@ -1,7 +1,7 @@
 # TRONOS
 *TRacking of Nuclear OScillations*
 
-This repository contains the code and example input-output files for the pipeline used to assay nuclear oscillation patterns during meiotic prophase in *S. pombe*; check the preprint at  . TRONOS uses _.tiff_ or _.dv_ files as source data.
+This repository contains the code and example input-output files for the pipeline used to assay nuclear oscillation patterns during meiotic prophase in *S. pombe*; check the preprint at [bioRxiv](https://www.biorxiv.org/content/10.1101/2020.07.23.218016v1). TRONOS uses _.tiff_ or _.dv_ files as source data.
 
 ## Scripts
 The software is composed of four main scripts:
@@ -37,7 +37,7 @@ cd Tronos/tronos
 ```
 sudo apt-get install python3 pip
 pip install mrc tifffile Rtree numpy pandas trackpy detecto Pillow
-cat * > ../models/celltype.pth.xz
+cat ../models/* > ../models/celltype.pth.xz
 xz --decompress ../models/celltype.pth.xz
 ```
 3. Execute the tronos.py script to reconstruct trajectories and morphologies from raw imaging files
